@@ -86,7 +86,7 @@ export function KanbanBoard() {
                 <Button
                   size="sm"
                   variant="ghost"
-                  className="opacity-0 group-hover:opacity-100 transition-opacity shrink-0"
+                  className="opacity-70 hover:opacity-100 transition-opacity shrink-0"
                   onClick={() => handleAddToMyList(book)}
                 >
                   <Plus className="w-4 h-4" />
