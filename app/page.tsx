@@ -5,7 +5,9 @@ import { BookList } from "@/components/book-list"
 import { KanbanBoard } from "@/components/kanban-board"
 
 export default function Home() {
-  const [selectedOrder, setSelectedOrder] = useState<"chronological" | "brandos-recs">("chronological")
+  const [selectedOrder, setSelectedOrder] = useState<"novels" | "cosmere" | "non-cosmere" | "shorts-novellas" | "all">(
+    "novels",
+  )
 
   return (
     <main className="min-h-screen p-4 md:p-8">

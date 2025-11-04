@@ -65,7 +65,7 @@ export function KanbanBoard() {
       {/* The Books Column */}
       <Card className="p-4">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold">The Books</h2>
+          <h2 className="text-xl font-bold">Scrap List</h2>
           <span className="text-sm text-muted-foreground">{books.length} books</span>
         </div>
         <div className="space-y-2 max-h-[600px] overflow-y-auto pr-2">
