@@ -26,6 +26,8 @@ export function KanbanBoard() {
   const [draggedItem, setDraggedItem] = useState<Book | null>(null)
   const [draggedFromMyList, setDraggedFromMyList] = useState(false)
 
+  const availableBooks = books.filter((book) => !myList.find((b) => b.id === book.id))
+
   const toggleReadStatus = (bookId: string) => {
     setReadBooks((prev) => {
       const newSet = new Set(prev)
@@ -85,10 +87,10 @@ export function KanbanBoard() {
       <Card className="p-4">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-bold">Scrap List</h2>
-          <span className="text-sm text-muted-foreground">{books.length} books</span>
+          <span className="text-sm text-muted-foreground">{availableBooks.length} books</span>
         </div>
         <div className="space-y-2 max-h-[600px] overflow-y-auto pr-2">
-          {books.map((book) => (
+          {availableBooks.map((book) => (
             <div
               key={book.id}
               draggable
