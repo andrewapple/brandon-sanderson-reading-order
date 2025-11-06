@@ -5,9 +5,9 @@ import type React from "react"
 import { useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Download, GripVertical, Plus } from "lucide-react"
+import { Download, GripVertical, Plus, BookOpen } from "lucide-react"
 import { books } from "@/lib/books-data"
-import { exportToPDF } from "@/lib/pdf-export"
+import { exportMyListToPDF } from "@/lib/pdf-export"
 
 interface Book {
   id: string
@@ -16,14 +16,34 @@ interface Book {
   year: number
 }
 
+interface BookWithStatus extends Book {
+  isRead: boolean
+}
+
 export function KanbanBoard() {
-  const [myList, setMyList] = useState<Book[]>([])
+  const [myList, setMyList] = useState<BookWithStatus[]>([])
+  const [readBooks, setReadBooks] = useState<Set<string>>(new Set())
   const [draggedItem, setDraggedItem] = useState<Book | null>(null)
   const [draggedFromMyList, setDraggedFromMyList] = useState(false)
 
+  const toggleReadStatus = (bookId: string) => {
+    setReadBooks((prev) => {
+      const newSet = new Set(prev)
+      if (newSet.has(bookId)) {
+        newSet.delete(bookId)
+      } else {
+        newSet.add(bookId)
+      }
+      return newSet
+    })
+
+    // Update the book in myList if it exists there
+    setMyList((prev) => prev.map((book) => (book.id === bookId ? { ...book, isRead: !book.isRead } : book)))
+  }
+
   const handleAddToMyList = (book: Book) => {
     if (!myList.find((b) => b.id === book.id)) {
-      setMyList([...myList, book])
+      setMyList([...myList, { ...book, isRead: readBooks.has(book.id) }])
     }
   }
 
@@ -56,8 +76,7 @@ export function KanbanBoard() {
   }
 
   const handleExportMyList = () => {
-    const bookList = myList.map((book) => book.title)
-    exportToPDF(bookList, "My Brandon Sanderson Reading List")
+    exportMyListToPDF(myList)
   }
 
   return (
@@ -83,14 +102,29 @@ export function KanbanBoard() {
                     {book.series} • {book.year}
                   </div>
                 </div>
-                <Button
-                  size="sm"
-                  variant="ghost"
-                  className="opacity-70 hover:opacity-100 transition-opacity shrink-0"
-                  onClick={() => handleAddToMyList(book)}
-                >
-                  <Plus className="w-4 h-4" />
-                </Button>
+                <div className="flex items-center gap-1 shrink-0">
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    className={`transition-all ${
+                      readBooks.has(book.id) ? "text-primary hover:text-primary/80" : "opacity-70 hover:opacity-100"
+                    }`}
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      toggleReadStatus(book.id)
+                    }}
+                  >
+                    <BookOpen className="w-4 h-4" fill={readBooks.has(book.id) ? "currentColor" : "none"} />
+                  </Button>
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    className="opacity-70 hover:opacity-100 transition-opacity"
+                    onClick={() => handleAddToMyList(book)}
+                  >
+                    <Plus className="w-4 h-4" />
+                  </Button>
+                </div>
               </div>
             </div>
           ))}
@@ -137,14 +171,29 @@ export function KanbanBoard() {
                           {book.series} • {book.year}
                         </div>
                       </div>
-                      <Button
-                        size="sm"
-                        variant="ghost"
-                        className="opacity-0 group-hover:opacity-100 transition-opacity shrink-0 text-destructive hover:text-destructive"
-                        onClick={() => handleRemoveFromMyList(book.id)}
-                      >
-                        ×
-                      </Button>
+                      <div className="flex items-center gap-1 shrink-0">
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          className={`transition-all ${
+                            book.isRead ? "text-primary hover:text-primary/80" : "opacity-70 hover:opacity-100"
+                          }`}
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            toggleReadStatus(book.id)
+                          }}
+                        >
+                          <BookOpen className="w-4 h-4" fill={book.isRead ? "currentColor" : "none"} />
+                        </Button>
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          className="opacity-0 group-hover:opacity-100 transition-opacity text-destructive hover:text-destructive"
+                          onClick={() => handleRemoveFromMyList(book.id)}
+                        >
+                          ×
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
