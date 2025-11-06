@@ -62,7 +62,7 @@ export function BookList({ selectedOrder, onOrderChange }: BookListProps) {
   <div className="space-y-1 max-h-[500px] overflow-y-auto pr-2">
     {currentBooks.map((book) => (
       <div key={book.id} className="py-1 text-sm font-medium">
-        {book.title} <span className="text-xs text-muted-foreground"> ({book.series} • {book.year})</span>
+        {book.title} <span className="text-xs text-muted-foreground italic"> ({book.year})</span>
       </div>
     ))}
   </div>
