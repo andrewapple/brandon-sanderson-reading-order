@@ -58,18 +58,17 @@ export function BookList({ selectedOrder, onOrderChange }: BookListProps) {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-3 text-lg">Book List</h3>
-            <div className="space-y-1 max-h-[500px] overflow-y-auto pr-2">
-              {currentBooks.map((book) => (
-                <div key={book.id} className="py-1">
-                  <div className="font-medium text-sm">{book.title}</div>
-                  <div className="text-xs text-muted-foreground">
-                    {book.series} • {book.year}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+  <h3 className="font-semibold mb-3 text-lg">Book List</h3>
+  <div className="space-y-1 max-h-[500px] overflow-y-auto pr-2">
+    {currentBooks.map((book) => (
+      <div key={book.id} className="py-1 flex items-center justify-between text-sm font-medium">
+        <span>{book.title}</span>
+        <span className="text-xs text-muted-foreground">{book.series} • {book.year}</span>
+      </div>
+    ))}
+  </div>
+</div>
+
 
           <Button onClick={handleExport} className="w-full" variant="default">
             <Download className="w-4 h-4 mr-2" />
