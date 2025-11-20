@@ -74,7 +74,7 @@ export function BookList({ selectedOrder, onOrderChange }: BookListProps) {
             </div>
           </div>
 
-          <Button onClick={handleExport} className="w-full" variant="default">
+          <Button onClick={handleExport} className="w-full cursor-pointer" variant="default">
             <Download className="w-4 h-4 mr-2" />
             Export to PDF
           </Button>

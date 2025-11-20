@@ -68,14 +68,8 @@ export function exportMyListToPDF(bookList: BookWithStatus[]) {
     }
 
     if (book.isRead) {
-      // Book icon (simplified as filled circle with "B")
       doc.setFillColor(59, 64, 91) // Navy color from palette
       doc.circle(margin + 1.5, yPosition - 1.5, 1.5, "F")
-      doc.setTextColor(244, 241, 222) // Cream color
-      doc.setFontSize(7)
-      doc.text("B", margin + 0.8, yPosition + 0.5)
-      doc.setTextColor(0, 0, 0)
-      doc.setFontSize(10)
     } else {
       // Checkbox
       doc.rect(margin, yPosition - 3, 3, 3)
@@ -103,9 +97,6 @@ export function exportMyListToPDF(bookList: BookWithStatus[]) {
   // Book icon legend
   doc.setFillColor(59, 64, 91)
   doc.circle(margin + 1.5, yPosition - 1.5, 1.5, "F")
-  doc.setTextColor(244, 241, 222)
-  doc.setFontSize(7)
-  doc.text("B", margin + 0.8, yPosition + 0.5)
   doc.setTextColor(0, 0, 0)
   doc.setFontSize(9)
   doc.text("Finished Already", margin + 6, yPosition)

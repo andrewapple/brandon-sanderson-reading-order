@@ -204,7 +204,7 @@ export function KanbanBoard() {
           )}
         </div>
         {myList.length > 0 && (
-          <Button onClick={handleExportMyList} className="w-full mt-4" variant="default">
+          <Button onClick={handleExportMyList} className="w-full mt-4 cursor-pointer" variant="default">
             <Download className="w-4 h-4 mr-2" />
             Export My List to PDF
           </Button>
