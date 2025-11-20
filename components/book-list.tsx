@@ -7,35 +7,20 @@ import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
 import { Card } from "@/components/ui/card"
 import { Download } from "lucide-react"
-import { novels, cosmereBooks, nonCosmereBooks, shortsAndNovellas, allBooks } from "@/lib/books-data"
+import { getBooksByCategory } from "@/lib/books-data"
 import { exportToPDF } from "@/lib/pdf-export"
 
 interface BookListProps {
-  selectedOrder: "novels" | "cosmere" | "non-cosmere" | "shorts-novellas" | "all"
-  onOrderChange: (order: "novels" | "cosmere" | "non-cosmere" | "shorts-novellas" | "all") => void
+  selectedOrder: "Novels" | "Shorts & Novellas" | "Junior & YA" | "Cosmere" | "Non-Cosmere" | "GO FULL SANDO"
+  onOrderChange: (
+    order: "Novels" | "Shorts & Novellas" | "Junior & YA" | "Cosmere" | "Non-Cosmere" | "GO FULL SANDO",
+  ) => void
 }
 
 export function BookList({ selectedOrder, onOrderChange }: BookListProps) {
-  const [showSeriesInfo, setShowSeriesInfo] = useState(true)
+  const [showSeries, setShowSeries] = useState(true)
 
-  const getBookList = () => {
-    switch (selectedOrder) {
-      case "novels":
-        return novels
-      case "cosmere":
-        return cosmereBooks
-      case "non-cosmere":
-        return nonCosmereBooks
-      case "shorts-novellas":
-        return shortsAndNovellas
-      case "all":
-        return allBooks
-      default:
-        return novels
-    }
-  }
-
-  const currentBooks = getBookList()
+  const currentBooks = getBooksByCategory(selectedOrder)
 
   const handleExport = () => {
     const bookList = currentBooks.map((book) => book.title)
@@ -54,18 +39,19 @@ export function BookList({ selectedOrder, onOrderChange }: BookListProps) {
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="novels">Novels</SelectItem>
-                  <SelectItem value="cosmere">Cosmere</SelectItem>
-                  <SelectItem value="non-cosmere">Non-Cosmere</SelectItem>
-                  <SelectItem value="shorts-novellas">Shorts & Novellas</SelectItem>
-                  <SelectItem value="all">All</SelectItem>
+                  <SelectItem value="Novels">Novels</SelectItem>
+                  <SelectItem value="Shorts & Novellas">Shorts & Novellas</SelectItem>
+                  <SelectItem value="Junior & YA">Junior & YA</SelectItem>
+                  <SelectItem value="Cosmere">Cosmere</SelectItem>
+                  <SelectItem value="Non-Cosmere">Non-Cosmere</SelectItem>
+                  <SelectItem value="GO FULL SANDO">GO FULL SANDO</SelectItem>
                 </SelectContent>
               </Select>
             </div>
             <div className="flex items-center gap-2">
-              <Switch id="series-info" checked={showSeriesInfo} onCheckedChange={setShowSeriesInfo} />
+              <Switch id="series-info" checked={showSeries} onCheckedChange={setShowSeries} />
               <Label htmlFor="series-info" className="text-sm cursor-pointer">
-                Show Series Info
+                Show Series
               </Label>
             </div>
           </div>
@@ -76,7 +62,7 @@ export function BookList({ selectedOrder, onOrderChange }: BookListProps) {
               {currentBooks.map((book) => (
                 <div key={book.id} className="py-1 text-sm font-medium">
                   {book.title}{" "}
-                  {showSeriesInfo ? (
+                  {showSeries ? (
                     <span className="text-xs text-muted-foreground italic">
                       ({book.series} • {book.year})
                     </span>
