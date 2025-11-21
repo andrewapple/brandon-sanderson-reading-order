@@ -54,10 +54,11 @@ export function exportMyListToPDF(bookList: BookWithStatus[]) {
   // Title
   doc.setFontSize(16)
   doc.setFont("helvetica", "bold")
-  doc.text("My Brandon Sanderson Reading List", margin, yPosition)
-  yPosition += lineHeight * 2
+  doc.text("My Brandon Sanderson Reading List", margin, yPosition);
+  yPosition += lineHeight * 2;
 
-  doc.text("“There’s always another secret.”— Kelsier, Mistborn", pageWidth / 2, yPosition, { align: "center" })
+doc.text("“There’s always another secret.”— Kelsier, Mistborn", pageWidth / 2, yPosition, { align: "center" });
+yPosition += lineHeight * 2.5; // adjust as needed
 
 
   // Books
