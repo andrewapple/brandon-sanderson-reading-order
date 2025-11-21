@@ -6,238 +6,6 @@ export interface Book {
   categories: string[]
 }
 
-export const novels: Book[] = [
-  { id: "1", title: "Elantris", series: "Elantris", year: 2005, categories: ["Novels", "Cosmere"] },
-  { id: "2", title: "The Final Empire", series: "Mistborn Era 1", year: 2006, categories: ["Novels", "Cosmere"] },
-  { id: "3", title: "The Well of Ascension", series: "Mistborn Era 1", year: 2007, categories: ["Novels", "Cosmere"] },
-  { id: "4", title: "The Hero of Ages", series: "Mistborn Era 1", year: 2008, categories: ["Novels", "Cosmere"] },
-  { id: "5", title: "Warbreaker", series: "Warbreaker", year: 2009, categories: ["Novels", "Cosmere"] },
-  { id: "6", title: "The Way of Kings", series: "Stormlight Archive", year: 2010, categories: ["Novels", "Cosmere"] },
-  { id: "7", title: "The Alloy of Law", series: "Mistborn Era 2", year: 2011, categories: ["Novels", "Cosmere"] },
-  {
-    id: "8",
-    title: "The Emperor's Soul",
-    series: "Elantris",
-    year: 2012,
-    categories: ["Shorts & Novellas", "Cosmere"],
-  },
-  { id: "9", title: "Words of Radiance", series: "Stormlight Archive", year: 2014, categories: ["Novels", "Cosmere"] },
-  { id: "10", title: "Shadows of Self", series: "Mistborn Era 2", year: 2015, categories: ["Novels", "Cosmere"] },
-  { id: "11", title: "The Bands of Mourning", series: "Mistborn Era 2", year: 2016, categories: ["Novels", "Cosmere"] },
-  { id: "12", title: "Arcanum Unbounded", series: "Cosmere Collection", year: 2016, categories: ["Cosmere"] },
-  { id: "13", title: "Oathbringer", series: "Stormlight Archive", year: 2017, categories: ["Novels", "Cosmere"] },
-  { id: "14", title: "Skyward", series: "Skyward", year: 2018, categories: ["Novels", "Non-Cosmere", "Junior & YA"] },
-  { id: "15", title: "Starsight", series: "Skyward", year: 2019, categories: ["Novels", "Non-Cosmere", "Junior & YA"] },
-  {
-    id: "16",
-    title: "Dawnshard",
-    series: "Stormlight Archive",
-    year: 2020,
-    categories: ["Shorts & Novellas", "Cosmere"],
-  },
-  { id: "17", title: "Rhythm of War", series: "Stormlight Archive", year: 2020, categories: ["Novels", "Cosmere"] },
-  { id: "18", title: "Cytonic", series: "Skyward", year: 2021, categories: ["Novels", "Non-Cosmere", "Junior & YA"] },
-  {
-    id: "19",
-    title: "Tress of the Emerald Sea",
-    series: "Secret Projects",
-    year: 2023,
-    categories: ["Novels", "Cosmere"],
-  },
-  {
-    id: "20",
-    title: "The Frugal Wizard's Handbook",
-    series: "Secret Projects",
-    year: 2023,
-    categories: ["Novels", "Cosmere"],
-  },
-  {
-    id: "21",
-    title: "Yumi and the Nightmare Painter",
-    series: "Secret Projects",
-    year: 2023,
-    categories: ["Novels", "Cosmere"],
-  },
-  { id: "22", title: "The Sunlit Man", series: "Secret Projects", year: 2023, categories: ["Novels", "Cosmere"] },
-  { id: "23", title: "Wind and Truth", series: "Stormlight Archive", year: 2024, categories: ["Novels", "Cosmere"] },
-]
-
-export const cosmereBooks: Book[] = [
-  { id: "c1", title: "Elantris", series: "Elantris", year: 2005, categories: ["Novels", "Cosmere"] },
-  { id: "c2", title: "The Final Empire", series: "Mistborn Era 1", year: 2006, categories: ["Novels", "Cosmere"] },
-  { id: "c3", title: "The Well of Ascension", series: "Mistborn Era 1", year: 2007, categories: ["Novels", "Cosmere"] },
-  { id: "c4", title: "The Hero of Ages", series: "Mistborn Era 1", year: 2008, categories: ["Novels", "Cosmere"] },
-  { id: "c5", title: "Warbreaker", series: "Warbreaker", year: 2009, categories: ["Novels", "Cosmere"] },
-  { id: "c6", title: "The Way of Kings", series: "Stormlight Archive", year: 2010, categories: ["Novels", "Cosmere"] },
-  { id: "c7", title: "The Alloy of Law", series: "Mistborn Era 2", year: 2011, categories: ["Novels", "Cosmere"] },
-  {
-    id: "c8",
-    title: "The Emperor's Soul",
-    series: "Elantris",
-    year: 2012,
-    categories: ["Shorts & Novellas", "Cosmere"],
-  },
-  { id: "c9", title: "Words of Radiance", series: "Stormlight Archive", year: 2014, categories: ["Novels", "Cosmere"] },
-  { id: "c10", title: "Shadows of Self", series: "Mistborn Era 2", year: 2015, categories: ["Novels", "Cosmere"] },
-  {
-    id: "c11",
-    title: "The Bands of Mourning",
-    series: "Mistborn Era 2",
-    year: 2016,
-    categories: ["Novels", "Cosmere"],
-  },
-  { id: "c12", title: "Arcanum Unbounded", series: "Cosmere Collection", year: 2016, categories: ["Cosmere"] },
-  { id: "c13", title: "Oathbringer", series: "Stormlight Archive", year: 2017, categories: ["Novels", "Cosmere"] },
-  {
-    id: "c14",
-    title: "Dawnshard",
-    series: "Stormlight Archive",
-    year: 2020,
-    categories: ["Shorts & Novellas", "Cosmere"],
-  },
-  { id: "c15", title: "Rhythm of War", series: "Stormlight Archive", year: 2020, categories: ["Novels", "Cosmere"] },
-  {
-    id: "c16",
-    title: "Tress of the Emerald Sea",
-    series: "Secret Projects",
-    year: 2023,
-    categories: ["Novels", "Cosmere"],
-  },
-  {
-    id: "c17",
-    title: "Yumi and the Nightmare Painter",
-    series: "Secret Projects",
-    year: 2023,
-    categories: ["Novels", "Cosmere"],
-  },
-  { id: "c18", title: "The Sunlit Man", series: "Secret Projects", year: 2023, categories: ["Novels", "Cosmere"] },
-  { id: "c19", title: "Wind and Truth", series: "Stormlight Archive", year: 2024, categories: ["Novels", "Cosmere"] },
-]
-
-export const nonCosmereBooks: Book[] = [
-  {
-    id: "nc1",
-    title: "The Rithmatist",
-    series: "The Rithmatist",
-    year: 2013,
-    categories: ["Novels", "Non-Cosmere", "Junior & YA"],
-  },
-  {
-    id: "nc2",
-    title: "Steelheart",
-    series: "The Reckoners",
-    year: 2013,
-    categories: ["Novels", "Non-Cosmere", "Junior & YA"],
-  },
-  {
-    id: "nc3",
-    title: "Mitosis",
-    series: "The Reckoners",
-    year: 2013,
-    categories: ["Shorts & Novellas", "Non-Cosmere", "Junior & YA"],
-  },
-  {
-    id: "nc4",
-    title: "Firefight",
-    series: "The Reckoners",
-    year: 2015,
-    categories: ["Novels", "Non-Cosmere", "Junior & YA"],
-  },
-  {
-    id: "nc5",
-    title: "Calamity",
-    series: "The Reckoners",
-    year: 2016,
-    categories: ["Novels", "Non-Cosmere", "Junior & YA"],
-  },
-  { id: "nc6", title: "Skyward", series: "Skyward", year: 2018, categories: ["Novels", "Non-Cosmere", "Junior & YA"] },
-  {
-    id: "nc7",
-    title: "Starsight",
-    series: "Skyward",
-    year: 2019,
-    categories: ["Novels", "Non-Cosmere", "Junior & YA"],
-  },
-  { id: "nc8", title: "Cytonic", series: "Skyward", year: 2021, categories: ["Novels", "Non-Cosmere", "Junior & YA"] },
-  {
-    id: "nc9",
-    title: "Defiant",
-    series: "Skyward",
-    year: 2023,
-    categories: ["Shorts & Novellas", "Non-Cosmere", "Junior & YA"],
-  },
-  {
-    id: "nc10",
-    title: "The Frugal Wizard's Handbook",
-    series: "Secret Projects",
-    year: 2023,
-    categories: ["Novels", "Cosmere"],
-  },
-]
-
-export const shortsAndNovellas: Book[] = [
-  {
-    id: "sn1",
-    title: "The Emperor's Soul",
-    series: "Elantris",
-    year: 2012,
-    categories: ["Shorts & Novellas", "Cosmere"],
-  },
-  {
-    id: "sn2",
-    title: "The Eleventh Metal",
-    series: "Mistborn",
-    year: 2011,
-    categories: ["Shorts & Novellas", "Cosmere"],
-  },
-  { id: "sn3", title: "Allomancer Jak", series: "Mistborn", year: 2011, categories: ["Shorts & Novellas", "Cosmere"] },
-  {
-    id: "sn4",
-    title: "Mistborn: Secret History",
-    series: "Mistborn",
-    year: 2016,
-    categories: ["Shorts & Novellas", "Cosmere"],
-  },
-  {
-    id: "sn5",
-    title: "Edgedancer",
-    series: "Stormlight Archive",
-    year: 2016,
-    categories: ["Shorts & Novellas", "Cosmere"],
-  },
-  {
-    id: "sn6",
-    title: "Dawnshard",
-    series: "Stormlight Archive",
-    year: 2020,
-    categories: ["Shorts & Novellas", "Cosmere"],
-  },
-  {
-    id: "sn7",
-    title: "The Hope of Elantris",
-    series: "Elantris",
-    year: 2006,
-    categories: ["Shorts & Novellas", "Cosmere"],
-  },
-  {
-    id: "sn8",
-    title: "Shadows for Silence",
-    series: "Cosmere",
-    year: 2013,
-    categories: ["Shorts & Novellas", "Cosmere"],
-  },
-  {
-    id: "sn9",
-    title: "Sixth of the Dusk",
-    series: "Cosmere",
-    year: 2014,
-    categories: ["Shorts & Novellas", "Cosmere"],
-  },
-  { id: "sn10", title: "White Sand", series: "Cosmere", year: 2016, categories: ["Shorts & Novellas", "Cosmere"] },
-]
-
-export const allBooks: Book[] = [...novels, ...nonCosmereBooks, ...shortsAndNovellas]
-
 export const sandersonWorks: Book[] = [
   { id: 1, title: "Elantris", year: 2005, series: "Elantris", categories: ["Novels", "Cosmere"] },
   { id: 2, title: "The Final Empire", year: 2006, series: "Mistborn Era 1", categories: ["Novels", "Cosmere"] },
@@ -248,7 +16,6 @@ export const sandersonWorks: Book[] = [
     series: "Elantris (short story)",
     categories: ["Shorts & Novellas", "Cosmere"],
   },
-
   {
     id: 4,
     title: "Alcatraz Versus the Evil Librarians",
@@ -257,7 +24,6 @@ export const sandersonWorks: Book[] = [
     categories: ["Novels", "Junior & YA", "Non-Cosmere"],
   },
   { id: 5, title: "The Well of Ascension", year: 2007, series: "Mistborn Era 1", categories: ["Novels", "Cosmere"] },
-
   {
     id: 6,
     title: "Alcatraz Versus the Scrivener's Bones",
@@ -273,7 +39,6 @@ export const sandersonWorks: Book[] = [
     categories: ["Shorts & Novellas", "Non-Cosmere", "Junior & YA"],
   },
   { id: 8, title: "The Hero of Ages", year: 2008, series: "Mistborn Era 1", categories: ["Novels", "Cosmere"] },
-
   {
     id: 9,
     title: "Alcatraz Versus the Knights of Crystallia",
@@ -283,7 +48,6 @@ export const sandersonWorks: Book[] = [
   },
   { id: 10, title: "The Gathering Storm", year: 2009, series: "The Wheel of Time", categories: ["WOT Novels"] },
   { id: 11, title: "Warbreaker", year: 2009, series: "Warbreaker", categories: ["Novels", "Cosmere"] },
-
   {
     id: 12,
     title: "Alcatraz Versus the Shattered Lens",
@@ -299,7 +63,6 @@ export const sandersonWorks: Book[] = [
     categories: ["Novels", "Cosmere"],
   },
   { id: 14, title: "Towers of Midnight", year: 2010, series: "The Wheel of Time", categories: ["WOT Novels"] },
-
   {
     id: 15,
     title: "I Hate Dragons",
@@ -322,7 +85,6 @@ export const sandersonWorks: Book[] = [
     series: "Mistborn Era 1 (short story)",
     categories: ["Shorts & Novellas", "Cosmere"],
   },
-
   {
     id: 19,
     title: "Heuristic Algorithm and Reasoning Response Engine",
@@ -338,7 +100,6 @@ export const sandersonWorks: Book[] = [
     series: "Elantris (novella)",
     categories: ["Shorts & Novellas", "Cosmere"],
   },
-
   { id: 22, title: "A Memory of Light", year: 2013, series: "The Wheel of Time", categories: ["WOT Novels"] },
   {
     id: 23,
@@ -375,7 +136,6 @@ export const sandersonWorks: Book[] = [
     series: "The Reckoners",
     categories: ["Novels", "Non-Cosmere", "Junior & YA"],
   },
-
   {
     id: 28,
     title: "Legion: Skin Deep",
@@ -398,7 +158,6 @@ export const sandersonWorks: Book[] = [
     series: "The Stormlight Archive",
     categories: ["Novels", "Cosmere"],
   },
-
   {
     id: 32,
     title: "Firefight",
@@ -414,7 +173,6 @@ export const sandersonWorks: Book[] = [
     categories: ["Shorts & Novellas", "Non-Cosmere"],
   },
   { id: 34, title: "Shadows of Self", year: 2015, series: "Mistborn Era 2", categories: ["Novels", "Cosmere"] },
-
   {
     id: 35,
     title: "Alcatraz Versus the Dark Talent",
@@ -458,7 +216,6 @@ export const sandersonWorks: Book[] = [
     series: "White Sand (prose)",
     categories: ["Collections"],
   },
-
   {
     id: 42,
     title: "Snapshot",
@@ -467,7 +224,6 @@ export const sandersonWorks: Book[] = [
     categories: ["Shorts & Novellas", "Non-Cosmere"],
   },
   { id: 43, title: "Oathbringer", year: 2017, series: "The Stormlight Archive", categories: ["Novels", "Cosmere"] },
-
   {
     id: 44,
     title: "Lies of the Beholder",
@@ -483,7 +239,6 @@ export const sandersonWorks: Book[] = [
     series: "White Sand (graphic novel)",
     categories: ["Cosmere", "Non-Cosmere"],
   },
-
   {
     id: 47,
     title: "A Fire Within the Ways",
@@ -499,7 +254,6 @@ export const sandersonWorks: Book[] = [
     series: "White Sand (graphic novel)",
     categories: ["Cosmere", "Non-Cosmere"],
   },
-
   {
     id: 50,
     title: "Dawnshard",
@@ -522,7 +276,6 @@ export const sandersonWorks: Book[] = [
     series: "Sanderson Curiosities",
     categories: ["Go Full Sando", "Non-Cosmere"],
   },
-
   {
     id: 54,
     title: "Dark One",
@@ -545,7 +298,6 @@ export const sandersonWorks: Book[] = [
     categories: ["Shorts & Novellas", "Non-Cosmere", "Junior & YA"],
   },
   { id: 57, title: "Cytonic", year: 2021, series: "Skyward", categories: ["Novels", "Non-Cosmere", "Junior & YA"] },
-
   {
     id: 58,
     title: "Stephen Leeds: Death and Faxes",
@@ -561,7 +313,6 @@ export const sandersonWorks: Book[] = [
     series: "Alcatraz (co-written)",
     categories: ["Novels", "Junior & YA", "Non-Cosmere"],
   },
-
   {
     id: 61,
     title: "Tress of the Emerald Sea",
@@ -591,7 +342,6 @@ export const sandersonWorks: Book[] = [
     series: "Dark One (with Dan Wells)",
     categories: ["Audiobook", "Other", "Non-Cosmere"],
   },
-
   {
     id: 66,
     title: "The Most Boring Book Ever",
@@ -607,7 +357,6 @@ export const sandersonWorks: Book[] = [
     categories: ["Go Full Sando", "Non-Cosmere"],
   },
   { id: 68, title: "Wind and Truth", year: 2024, series: "The Stormlight Archive", categories: ["Novels", "Cosmere"] },
-
   { id: 69, title: "Isles of the Emberdark", year: 2025, series: "Secret Projects", categories: ["Novels", "Cosmere"] },
   {
     id: 70,
@@ -616,7 +365,6 @@ export const sandersonWorks: Book[] = [
     series: "Short Story Collection",
     categories: ["Shorts & Novellas", "Non-Cosmere"],
   },
-
   {
     id: 71,
     title: "Strata Wars: Songs of the Dead (announced co-write)",
