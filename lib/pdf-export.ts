@@ -106,5 +106,6 @@ export function exportMyListToPDF(bookList: BookWithStatus[]) {
   doc.setFontSize(9)
   doc.text("Finished Already", margin + 6, yPosition)
 
-  doc.save("my-reading-list.pdf")
+  //doc.save("my-reading-list.pdf")
+  doc.save(`${title.toLowerCase().replace(/\s+/g, "-")}.pdf`)
 }
