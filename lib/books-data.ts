@@ -67,7 +67,7 @@ export const sandersonWorks: Book[] = [
     id: 15,
     title: "I Hate Dragons",
     year: 2011,
-    series: "Standalone(short story)",
+    series: "Standalone (short story)",
     categories: ["Shorts & Novellas", "Non-Cosmere"],
   },
   {
