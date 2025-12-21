@@ -367,13 +367,6 @@ export const sandersonWorks: Book[] = [
   },
   {
     id: 71,
-    title: "Strata Wars: Songs of the Dead (announced co-write)",
-    year: 2026,
-    series: "Collaborations",
-    categories: ["Novels", "Other", "Non-Cosmere"],
-  },
-  {
-    id: 72,
     title: "The Fires of December",
     year: 2026,
     series: "Hoid's Travails",
