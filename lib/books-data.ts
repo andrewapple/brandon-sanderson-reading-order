@@ -317,14 +317,14 @@ export const sandersonWorks: Book[] = [
     id: 61,
     title: "Tress of the Emerald Sea",
     year: 2023,
-    series: "Secret Projects",
+    series: "Hoid's Travails",
     categories: ["Novels", "Cosmere"],
   },
   {
     id: 62,
     title: "Yumi and the Nightmare Painter",
     year: 2023,
-    series: "Secret Projects",
+    series: "Hoid's Travails",
     categories: ["Novels", "Cosmere"],
   },
   { id: 63, title: "The Sunlit Man", year: 2023, series: "Secret Projects", categories: ["Novels", "Cosmere"] },
@@ -371,6 +371,13 @@ export const sandersonWorks: Book[] = [
     year: 2026,
     series: "Collaborations",
     categories: ["Novels", "Other", "Non-Cosmere"],
+  },
+  {
+    id: 72,
+    title: "The Fires of December",
+    year: 2026,
+    series: "Hoid's Travails",
+    categories: ["Novels", "Cosmere"],
   },
 ]
 
