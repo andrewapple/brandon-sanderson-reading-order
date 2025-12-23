@@ -4,49 +4,49 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated theme to match Brandon Sanderson book tracker design with provided color palette */
-  --background: #f4f1de;
-  --foreground: #3d405b;
+  /* Updated theme with Phthalo Green (#123524) inspired palette - deep forest green, warm cream, sage, and amber accents */
+  --background: #faf8f3;
+  --foreground: #123524;
   --card: #ffffff;
-  --card-foreground: #3d405b;
+  --card-foreground: #123524;
   --popover: #ffffff;
-  --popover-foreground: #3d405b;
-  --primary: #e07a5f;
-  --primary-foreground: #ffffff;
-  --secondary: #81b29a;
+  --popover-foreground: #123524;
+  --primary: #123524;
+  --primary-foreground: #faf8f3;
+  --secondary: #6b8e7f;
   --secondary-foreground: #ffffff;
-  --muted: #f2cc8f;
-  --muted-foreground: #3d405b;
-  --accent: #81b29a;
-  --accent-foreground: #ffffff;
-  --destructive: #e07a5f;
+  --muted: #e8e4db;
+  --muted-foreground: #4a5e4d;
+  --accent: #d4a574;
+  --accent-foreground: #123524;
+  --destructive: #c44536;
   --destructive-foreground: #ffffff;
-  --border: #e0dcc8;
-  --input: #e0dcc8;
-  --ring: #e07a5f;
+  --border: #d4cfc2;
+  --input: #d4cfc2;
+  --ring: #123524;
   --radius: 0.5rem;
 }
 
 .dark {
-  --background: #3d405b;
-  --foreground: #f4f1de;
-  --card: #4a4d6b;
-  --card-foreground: #f4f1de;
-  --popover: #4a4d6b;
-  --popover-foreground: #f4f1de;
-  --primary: #e07a5f;
+  --background: #0d1f16;
+  --foreground: #e8e4db;
+  --card: #1a3328;
+  --card-foreground: #e8e4db;
+  --popover: #1a3328;
+  --popover-foreground: #e8e4db;
+  --primary: #6b8e7f;
   --primary-foreground: #ffffff;
-  --secondary: #81b29a;
-  --secondary-foreground: #ffffff;
-  --muted: #f2cc8f;
-  --muted-foreground: #f4f1de;
-  --accent: #81b29a;
-  --accent-foreground: #ffffff;
-  --destructive: #e07a5f;
+  --secondary: #4a5e4d;
+  --secondary-foreground: #e8e4db;
+  --muted: #2a4537;
+  --muted-foreground: #a8b5ad;
+  --accent: #d4a574;
+  --accent-foreground: #0d1f16;
+  --destructive: #c44536;
   --destructive-foreground: #ffffff;
-  --border: #5a5d7b;
-  --input: #5a5d7b;
-  --ring: #e07a5f;
+  --border: #2a4537;
+  --input: #2a4537;
+  --ring: #6b8e7f;
 }
 
 @theme inline {
