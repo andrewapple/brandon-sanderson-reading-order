@@ -190,7 +190,7 @@ export function KanbanBoard() {
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="opacity-0 group-hover:opacity-100 transition-opacity text-destructive hover:text-destructive"
+                          className="opacity-70 hover:opacity-100 transition-opacity text-destructive hover:text-destructive"
                           onClick={() => handleRemoveFromMyList(book.id)}
                         >
                           ×

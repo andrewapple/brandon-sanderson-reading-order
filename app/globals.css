@@ -4,14 +4,14 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated theme to match Brandon Sanderson book tracker design with provided color palette */
+  /* Updated primary and destructive colors from orange (#e07a5f) to red (#B21F27) */
   --background: #f4f1de;
   --foreground: #3d405b;
   --card: #ffffff;
   --card-foreground: #3d405b;
   --popover: #ffffff;
   --popover-foreground: #3d405b;
-  --primary: #e07a5f;
+  --primary: #b21f27;
   --primary-foreground: #ffffff;
   --secondary: #81b29a;
   --secondary-foreground: #ffffff;
@@ -19,11 +19,11 @@
   --muted-foreground: #3d405b;
   --accent: #81b29a;
   --accent-foreground: #ffffff;
-  --destructive: #e07a5f;
+  --destructive: #b21f27;
   --destructive-foreground: #ffffff;
   --border: #e0dcc8;
   --input: #e0dcc8;
-  --ring: #e07a5f;
+  --ring: #b21f27;
   --radius: 0.5rem;
 }
 
@@ -34,7 +34,7 @@
   --card-foreground: #f4f1de;
   --popover: #4a4d6b;
   --popover-foreground: #f4f1de;
-  --primary: #e07a5f;
+  --primary: #b21f27;
   --primary-foreground: #ffffff;
   --secondary: #81b29a;
   --secondary-foreground: #ffffff;
@@ -42,11 +42,11 @@
   --muted-foreground: #f4f1de;
   --accent: #81b29a;
   --accent-foreground: #ffffff;
-  --destructive: #e07a5f;
+  --destructive: #b21f27;
   --destructive-foreground: #ffffff;
   --border: #5a5d7b;
   --input: #5a5d7b;
-  --ring: #e07a5f;
+  --ring: #b21f27;
 }
 
 @theme inline {
